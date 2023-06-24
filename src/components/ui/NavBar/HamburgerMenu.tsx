@@ -64,9 +64,6 @@ const HamburgerMenu = ({ isOpen, setIsOpen, MenuRef }) => {
         <ul>
           <li className="flex space-x-4">
             <ThemeSwitcher />
-            <ThemeSwitcher />
-            <ThemeSwitcher />
-            <ThemeSwitcher />
           </li>
         </ul>
       </nav>
