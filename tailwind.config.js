@@ -12,11 +12,14 @@ module.exports = {
         notojp: ["var(--font-notojp)"],
       },
       fontSize: {
+        large: "var(--large)",
         h1: "var(--h1)",
         h2: "var(--h2)",
         h3: "var(--h3)",
-        p: "var(--p)",
-        s: "var(--s)",
+        h4: "var(--h4)",
+        h5: "var(--h5)",
+        h6: "var(--h6)",
+        body: "var(--bady)",
       },
       colors: {
         dark: "var(--foreground-color)",

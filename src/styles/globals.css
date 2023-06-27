@@ -54,27 +54,33 @@
 /* tablet */
 @media screen and (max-width: 1023px) {
   :root {
-    --h1: 80px;
-    --h2: 60px;
-    --h3: 40px;
-    --p: 16px;
-    --s: 14px;
+    --large: 50px;
+    --h1: 42px;
+    --h2: 32px;
+    --h3: 26px;
+    --h4: 22px;
+    --h5: 20px;
+    --h6: 18px;
+    --body: 16px;
   }
 }
 
 /* phone */
 @media screen and (max-width: 767px) {
   :root {
-    --h1: 48px;
-    --h2: 32px;
-    --h3: 24px;
-    --p: 14px;
-    --s: 12px;
+    --large: 32px;
+    --h1: 26px;
+    --h2: 24px;
+    --h3: 22px;
+    --h4: 20px;
+    --h5: 18px;
+    --h6: 16px;
+    --body: 14px;
   }
 }
 
 body {
-  font-size: var(--p);
+  font-size: var(--body);
   color: var(--foreground-color);
   background: var(--background-color);
 }
