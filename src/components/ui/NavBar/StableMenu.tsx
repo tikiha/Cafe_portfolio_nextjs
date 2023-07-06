@@ -1,32 +1,66 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import ThemeSwitcher from "../ThemeSwitch/ThemeSwitcher";
+import { motion } from "framer-motion";
+import NavViewPort from "./NavViewPort";
 
-const CustomLink = ({ href, title, className = "" }) => {
+const CustomButton = ({ href, title, className = "", setHovered }) => {
   const pathname = usePathname();
   return (
-    <Link
-      href={href}
-      className={`font-mont ${className} ${
+    <motion.div
+      onMouseEnter={() => setHovered(href)}
+      // onMouseLeave={() => setHovered(null)}
+      className={`cursor-pointer ${className} ${
         pathname === href
           ? "text-primary"
           : "hover:text-primary  ease duration-200"
       }`}
     >
       {title}
-    </Link>
+    </motion.div>
   );
 };
 
 const StableMenu = () => {
+  const [hoverd, setHovered] = useState(null);
   return (
-    <nav className="flex items-center max-md:hidden">
-      <CustomLink href={"/"} title={"Home"} className="mr-4" />
-      <CustomLink href={"/news"} title={"News"} className="mx-4" />
-      <CustomLink href={"/works"} title={"Works"} className="mx-4" />
-      <CustomLink href={"/contact"} title={"Contact"} className="mx-4" />
-      <ThemeSwitcher className="ml-4" />
+    <nav className="h-full flex items-center w-2/3 relative max-md:hidden group-hover:bg-slate-400">
+      <NavViewPort hoverd={hoverd} setHovered={setHovered} />
+
+      <div className="z-10 flex items-center justify-between w-full px-20">
+        <CustomButton
+          href={"quality"}
+          title={"珈琲作りのこだわり"}
+          className=""
+          setHovered={setHovered}
+        />
+        <CustomButton
+          href={"customer"}
+          title={"法人のお客様"}
+          className=""
+          setHovered={setHovered}
+        />
+        <CustomButton
+          href={"products"}
+          title={"商品一覧"}
+          className=""
+          setHovered={setHovered}
+        />
+        <CustomButton
+          href={"corporate"}
+          title={"会社案内"}
+          className=""
+          setHovered={setHovered}
+        />
+        <CustomButton
+          href={"contact"}
+          title={"お問い合わせ"}
+          className=""
+          setHovered={setHovered}
+        />
+        <ThemeSwitcher className="" />
+      </div>
     </nav>
   );
 };

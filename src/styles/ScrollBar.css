@@ -48,3 +48,14 @@ body {
   scrollbar-color: var(--thumb-color) transparent;
   overflow: overlay;
 }
+
+.scroll-hidden {
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE, Edge 対応 */
+  scrollbar-width: none; /* Firefox 対応 */
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none;
+}

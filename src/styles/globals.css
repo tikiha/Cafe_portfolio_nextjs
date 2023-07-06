@@ -6,10 +6,10 @@
 :root {
   --light: #fcfcfc;
   --dark: #222;
-  --primary: #b63e91;
-  --secondary: #45f;
-  --primary-dark: #58d6e9;
-  --secondary-dark: #896;
+  --primary: hsl(26, 22%, 30%);
+  --secondary: hsl(27, 20%, 80%);
+  --primary-dark: hsl(26, 20%, 60%);
+  --secondary-dark: hsl(26, 22%, 30%);
 
   --foreground-color: var(--light);
   --background-color: var(--dark);
@@ -40,15 +40,15 @@
   --secondary-color: var(--secondary-dark);
 }
 
-/* font-size */
-
 /* default */
 :root {
   --h1: 80px;
   --h2: 60px;
   --h3: 40px;
-  --p: 16px;
-  --s: 14px;
+  --h4: 22px;
+  --h5: 20px;
+  --h6: 18px;
+  --body: 16px;
 }
 
 /* tablet */
@@ -78,7 +78,6 @@
     --body: 14px;
   }
 }
-
 body {
   font-size: var(--body);
   color: var(--foreground-color);

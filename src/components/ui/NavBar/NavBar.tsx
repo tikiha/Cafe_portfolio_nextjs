@@ -6,11 +6,25 @@ import LogoPic from "@/Pics/next.svg";
 import HamburgerButton from "./HamburgerButton";
 import StableMenu from "./StableMenu";
 import HamburgerMenu from "./HamburgerMenu";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 const NavBar = () => {
   const ButtonRef = useRef<HTMLButtonElement>(null);
   const MenuRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [isStableOpen, setIsStableOpen] = useState(true);
+  const [scroll, setScroll] = useState(0);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest - scroll < 0) {
+      setIsStableOpen(true);
+    } else {
+      setIsStableOpen(false);
+    }
+    return setScroll(latest);
+  });
+
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
@@ -41,8 +55,10 @@ const NavBar = () => {
 
   return (
     <header
-      className="fixed z-50 top-0 w-full h-16 flex items-center justify-between px-10 bg-blue-100 
-    max-md:h-12 max-md:px-6"
+      className={`fixed z-50 w-full h-16 flex items-center justify-between px-10 bg-light
+    max-md:h-12 max-md:px-6 delay-300 duration-500 ease-in top-0  ${
+      isStableOpen ? "opacity-100" : "opacity-0 -translate-y-full"
+    } `}
     >
       <Link href={"/"} className="h-full">
         <Image
@@ -51,9 +67,7 @@ const NavBar = () => {
           className="h-full w-auto py-2"
         />
       </Link>
-
       <StableMenu />
-
       <HamburgerButton
         ButtonRef={ButtonRef}
         handleClick={handleClick}
