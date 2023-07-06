@@ -9,8 +9,8 @@ const TopScrollScale = ({ className }) => {
     offset: ["start start", "end end"],
   });
   const rounded = useTransform(scrollYProgress, [0, 0.5], [100, 0]);
-  const width = useTransform(scrollYProgress, [0, 0.5], ["100%", "120%"]);
-  const height = useTransform(scrollYProgress, [0, 0.5], ["50vh", "100vh"]);
+  const width = useTransform(scrollYProgress, [0, 0.5], ["90%", "100%"]);
+  const height = useTransform(scrollYProgress, [0, 0.5], ["70vh", "100vh"]);
   const opacity = useTransform(scrollYProgress, [0.7, 0.9], [0, 1]);
   const blur = useTransform(
     scrollYProgress,
@@ -18,12 +18,9 @@ const TopScrollScale = ({ className }) => {
     ["blur(10px)", "blur(0px)"]
   );
   return (
-    <section
-      ref={ref}
-      className={`container ml-0 pl-0 h-[350vh] relative w-[calc(100vw-12px)] ${className}`}
-    >
+    <section ref={ref} className={`h-[350vh] relative w-full ${className}`}>
       <motion.div
-        className="bg-[url(/coffeePics/brown.jpg)] sticky top-0 translate-y-[calc(50vh-50%)] bg-no-repeat bg-cover bg-center"
+        className="bg-[url(/coffeePics/brown.jpg)] sticky left-0 top-0 translate-y-[calc(50vh-50%)] bg-no-repeat bg-cover bg-center"
         style={{
           borderTopRightRadius: rounded,
           height: height,

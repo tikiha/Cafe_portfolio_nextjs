@@ -75,6 +75,9 @@ export default function ParallaxText({
         <span className="block mr-3">{children} </span>
         <span className="block mr-3">{children} </span>
         <span className="block mr-3">{children} </span>
+        <span className="block mr-3">{children} </span>
+        <span className="block mr-3">{children} </span>
+        <span className="block mr-3">{children} </span>
       </motion.div>
     </div>
   );
