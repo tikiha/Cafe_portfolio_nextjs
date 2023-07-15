@@ -37,12 +37,14 @@ const AboutUs = ({ className = "" }) => {
               <span className="text-red-500 font-bold text-xl focus-in-size">
                 ・
               </span>
-              <span className="text-sm fade-in-up">会社案内</span>
+              <span className="text-sm opacity-0 animate-[focus-in-expand_0.6s_0.3s_ease_forwards]">
+                会社案内
+              </span>
             </div>
-            <h1 className="text-h3 my-10 font-mont focus-in-expand">
+            <h1 className="text-h3 my-10 font-mont opacity-0 animate-[focus-in-expand_1.5s_0.6s_ease_forwards]">
               About Us
             </h1>
-            <p className="fade-in-up">
+            <p className="opacity-0 animate-[fade-in-up_1.5s_0.9s_ease_forwards]">
               山本珈琲は、全社員とお客様とが、共にコーヒーが与えてくれる喜びや感動をわかちあえる企業であり続けます。
             </p>
           </div>

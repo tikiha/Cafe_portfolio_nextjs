@@ -16,14 +16,16 @@ const StickyContainer = ({ className = "" }) => {
             <span className="text-red-500 font-bold text-xl focus-in-size">
               ・
             </span>
-            <span className="text-sm fade-in-up">私たちの想い</span>
+            <span className="text-sm opacity-0 animate-[focus-in-expand_0.6s_0.3s_ease_forwards]">
+              私たちの想い
+            </span>
           </div>
-          <h1 className="text-h3 my-10 animate-[focus-in-expand_1.5s_ease]">
+          <h1 className="text-h3 my-10 opacity-0 animate-[focus-in-expand_1.5s_0.6s_ease_forwards]">
             すべては美味しい
             <br />
             珈琲のために。
           </h1>
-          <div className="fade-in-up">
+          <div className="opacity-0 animate-[fade-in-up_1.5s_0.9s_ease_forwards]">
             <p className="text-body/loose mt-4">
               昭和25年創業、西日本屈指の焙煎工場を有し、
               <br />

@@ -10,8 +10,9 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "40px",
+      padding: "5%",
       margin: "auto",
+      screens: "",
     },
     extend: {
       fontFamily: {

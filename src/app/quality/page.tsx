@@ -1,28 +1,18 @@
-"use client";
 import React from "react";
-import Layout from "../layout";
 import TopScrollScale from "./components/TopScrollScale";
-import { motion } from "framer-motion";
 import Chapter from "./components/Chapter";
 import LinkCard from "@/components/LinkCard";
+import Footer from "@/components/Footer/Footer";
+import Title from "@/components/Title";
 
 const Page = () => {
   return (
     <main className="h-full w-full">
-      <motion.section
-        className="container flex flex-col items-start justify-end w-full h-[40lvh]"
-        initial={{ y: 100 }}
-        whileInView={{ y: 100 }}
-      >
-        <span className="text-red-500 font-bold text-3xl focus-in-size">
-          ・
-        </span>
-        <span className="mt-4 animate-[fade-in-up_1.5s_ease]">Quality</span>
-        <h1 className="text-h2 mt-10 animate-[focus-in-expand_1.5s_ease]">
-          珈琲作りのこだわり
-        </h1>
-      </motion.section>
-
+      <Title
+        title={"珈琲作りのこだわり"}
+        subtitle={"Quality"}
+        className={undefined}
+      />
       <TopScrollScale className="" />
       <Chapter
         className=""
@@ -69,7 +59,9 @@ const Page = () => {
         parallax={"In House Factory -"}
         title={"Factory"}
         subtitle={"自社焙煎工場について"}
+        className="mt-20"
       />
+      <Footer />
     </main>
   );
 };

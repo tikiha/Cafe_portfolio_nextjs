@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import ParallaxText from "./ui/ParallaxText";
 import Link from "next/link";
@@ -7,7 +8,7 @@ const LinkCard = ({ title, subtitle, href, parallax, className = "" }) => {
   const [hovered, setHovered] = useState(false);
   return (
     <section
-      className="w-full h-[50vh] bg-stone-200/50 relative group"
+      className={`w-full h-[50vh] bg-stone-200/50 relative group ${className}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

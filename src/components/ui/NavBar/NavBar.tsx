@@ -55,17 +55,13 @@ const NavBar = () => {
 
   return (
     <header
-      className={`fixed z-50 w-full h-16 flex items-center justify-between px-10 bg-light
+      className={`fixed z-50 w-full h-20 flex items-center justify-between px-[5%] bg-light
     max-md:h-12 max-md:px-6 delay-300 duration-500 ease-in top-0  ${
       isStableOpen ? "opacity-100" : "opacity-0 -translate-y-full"
     } `}
     >
-      <Link href={"/"} className="h-full">
-        <Image
-          src={LogoPic}
-          alt={"next image"}
-          className="h-full w-auto py-2"
-        />
+      <Link href={"/"} className="h-full flex items-center ">
+        <Image src={LogoPic} alt={"next image"} className="h-1/2 w-auto" />
       </Link>
       <StableMenu />
       <HamburgerButton

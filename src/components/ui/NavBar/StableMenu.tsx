@@ -25,7 +25,7 @@ const CustomButton = ({ href, title, className = "", setHovered }) => {
 const StableMenu = () => {
   const [hoverd, setHovered] = useState(null);
   return (
-    <nav className="h-full flex items-center w-2/3 relative max-md:hidden group-hover:bg-slate-400">
+    <nav className="h-full flex items-center w-3/5 relative max-md:hidden group-hover:bg-slate-400">
       <NavViewPort hoverd={hoverd} setHovered={setHovered} />
 
       <div className="z-10 flex items-center justify-between w-full px-20">

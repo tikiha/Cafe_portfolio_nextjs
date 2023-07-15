@@ -43,19 +43,21 @@ const OurServices = ({ className = "" }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "0px 0px -30% 0px", once: true });
   return (
-    <section className={`${className}`}>
+    <section className={`h-fit ${className}`}>
       {isInView ? (
         <div className="container grid grid-cols-12">
           <div className="col-start-2 col-span-11 flex items-center">
             <span className="text-red-500 font-bold text-xl focus-in-size">
               ・
             </span>
-            <span className="text-sm fade-in-up">事業内容</span>
+            <span className="text-sm opacity-0 animate-[focus-in-expand_0.6s_0.3s_ease_forwards]">
+              事業内容
+            </span>
           </div>
-          <h1 className="flex items-center col-start-2 col-span-4 text-h2 font-mont focus-in-expand">
+          <h1 className="flex items-center col-start-2 col-span-4 text-h2 font-mont opacity-0 animate-[focus-in-expand_1.5s_0.6s_ease_forwards]">
             Our Services
           </h1>
-          <span className="flex items-center col-span-7 text-body">
+          <span className="flex items-center col-span-7 text-body opacity-0 animate-[fade-in-up_1.5s_0.9s_ease_forwards]">
             掲載の商品以外にも取り扱いがあります
             <br />
             珈琲のことなら何でもご相談ください。
@@ -64,49 +66,50 @@ const OurServices = ({ className = "" }) => {
       ) : (
         <div ref={ref} className="w-full h-20" />
       )}
-
-      <div className="container !mr-0 lg:!p-0 w-full aspect-[3/1] relative z-10 overflow-hidden rounded-tl-[100px]">
-        <Image
-          src={"/coffeePics/ourservice.jpg"}
-          alt={"Our Service"}
-          fill
-          className="object-center object-cover"
-        />
-        <ParallaxText
-          baseVelocity={-1}
-          className={
-            "absolute top-1/2 -translate-y-1/2 text-light text-h2 font-mont"
-          }
-        >
-          Hojo coffee All for a great cup of coffee
-        </ParallaxText>
-      </div>
-      <div className="container !ml-0 lg:!p-0 -translate-y-[15%] bg-secondary overflow-hidden rounded-br-[15%]">
-        <div className="pt-[15%] w-full">
-          <CustomServiceLink
-            index={"01"}
-            title={"商品一覧"}
-            description={
-              "業務用・家庭用のコーヒー豆・粉,リキッドコーヒーなど幅広く商品展開しています."
-            }
-            href={"products"}
+      <div className="relative pt-[15%]">
+        <div className="container !mr-0 lg:!p-0 w-full absolute aspect-[3/1] top-0 right-0 z-10 overflow-hidden rounded-tl-[100px]">
+          <Image
+            src={"/coffeePics/ourservice.jpg"}
+            alt={"Our Service"}
+            fill
+            className="object-center object-cover"
           />
-          <CustomServiceLink
-            index={"02"}
-            title={"飲食店のお客様へ"}
-            description={
-              "飲食店やホテル,喫茶店のオーナー様へ.プロユースの様々なご要望にお答えするため,業務用商品を多数ご用意しています."
+          <ParallaxText
+            baseVelocity={-1}
+            className={
+              "absolute top-1/2 -translate-y-1/2 text-light text-h2 font-mont"
             }
-            href={"for-restaurant"}
-          />
-          <CustomServiceLink
-            index={"03"}
-            title={"小売流通関係のお客様へ"}
-            description={
-              "スーパーや小売店の販売者様へ。自社焙煎工場を保有しているため、安定した豆の供給が可能です。安心で美味しいご家庭用コーヒーの卸売を行っております。"
-            }
-            href={"for-retail"}
-          />
+          >
+            Hojo coffee All for a great cup of coffee
+          </ParallaxText>
+        </div>
+        <div className="container !ml-0 lg:!px-0 pt-[15%] bg-secondary overflow-hidden rounded-br-[15%]">
+          <div className="w-full">
+            <CustomServiceLink
+              index={"01"}
+              title={"商品一覧"}
+              description={
+                "業務用・家庭用のコーヒー豆・粉,リキッドコーヒーなど幅広く商品展開しています."
+              }
+              href={"products"}
+            />
+            <CustomServiceLink
+              index={"02"}
+              title={"飲食店のお客様へ"}
+              description={
+                "飲食店やホテル,喫茶店のオーナー様へ.プロユースの様々なご要望にお答えするため,業務用商品を多数ご用意しています."
+              }
+              href={"for-restaurant"}
+            />
+            <CustomServiceLink
+              index={"03"}
+              title={"小売流通関係のお客様へ"}
+              description={
+                "スーパーや小売店の販売者様へ。自社焙煎工場を保有しているため、安定した豆の供給が可能です。安心で美味しいご家庭用コーヒーの卸売を行っております。"
+              }
+              href={"for-retail"}
+            />
+          </div>
         </div>
       </div>
     </section>
