@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Carousel from "./Carousel";
 import { motion } from "framer-motion";
 import Layout from "../Layout";
+import WaveAnimation from "../wave/wave";
 
 const CustomListItem = ({
   title,
@@ -63,6 +64,7 @@ const MainSwiper = ({ className = "" }) => {
   return (
     <Layout className={`relative ${className}`}>
       <Carousel isSelected={isSelected} className="col-span-10" />
+      <WaveAnimation className="top-1/2" />
       <div className="col-span-2 h-full pt-[30%] px-10">
         <ol className=" h-fit relative">
           <div className="h-[calc(100%-30px)] my-4 border border-dashed border-slate-300 absolute left-[9px] " />

@@ -10,7 +10,7 @@ export default function Home() {
     <main className="w-full h-full">
       <div className="flex items-end justify-end mt-52 h-full focus-in-expand">
         <div className="flex lg:items-end max-lg:flex-col lg:pr-[10%] max-lg:pr-[20%]">
-          <h1 className="text-h2 font-normal lg:max-xl:text-5xl/normal">
+          <h1 className="text-h2 font-medium lg:max-xl:text-5xl/normal tracking-wider font-gothic">
             すべては至福の
             <br />
             一杯のために。

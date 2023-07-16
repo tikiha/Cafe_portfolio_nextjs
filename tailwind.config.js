@@ -18,6 +18,7 @@ module.exports = {
       fontFamily: {
         mont: ["var(--font-mont)"],
         notojp: ["var(--font-notojp)"],
+        gothic: ["var(--font-gothic)"],
       },
       fontSize: {
         large: "var(--large)",

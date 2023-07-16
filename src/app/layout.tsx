@@ -2,12 +2,22 @@ import NavBar from "@/components/ui/NavBar/NavBar";
 import "../styles/globals.css";
 import "../styles/ScrollBar.css";
 import "../styles/text-animation.css";
-import { Noto_Sans_JP, Montserrat } from "next/font/google";
+import {
+  Noto_Sans_JP,
+  Montserrat,
+  Zen_Kaku_Gothic_New,
+} from "next/font/google";
 
 const notojp = Noto_Sans_JP({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-notojp",
+});
+
+const gothic = Zen_Kaku_Gothic_New({
+  subsets: ["latin"],
+  variable: "--font-gothic",
+  weight: ["400", "500"],
 });
 
 const mont = Montserrat({
@@ -28,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`font-notojp min-h-screen w-full ${mont.variable} ${notojp.variable}`}
+        className={`font-gothic min-h-screen w-full ${gothic.variable} ${mont.variable} ${notojp.variable}`}
       >
         <NavBar />
         {children}
