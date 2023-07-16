@@ -13,7 +13,7 @@ const images = [
 const Carousel = ({ isSelected, className = "" }) => {
   return (
     <div
-      className={`w-full aspect-[16/9] rounded-tr-[100px] relative overflow-hidden flex items-center ${className}`}
+      className={`w-full md:aspect-video md:rounded-tr-[100px] relative overflow-hidden flex items-center max-md:rounded-tr-[20%] max-md:aspect-square ${className}`}
     >
       <AnimatePresence>
         {images.map(
@@ -23,7 +23,7 @@ const Carousel = ({ isSelected, className = "" }) => {
                 key={image.title}
                 src={image.src}
                 alt=""
-                className="object-cover object-center w-full absolute"
+                className="object-cover object-center max-md:h-full absolute"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}

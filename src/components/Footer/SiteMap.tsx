@@ -17,12 +17,12 @@ const SiteMap = ({ className = "" }) => {
   return (
     <section className={`bg-primary w-full h-fit ${className}`}>
       <Layout className="h-full py-20 text-Light">
-        <div className="col-start-5 col-span-2 flex flex-col items-start">
+        <div className="col-start-5 col-span-2 flex flex-col items-start max-md:hidden">
           <h3 className="text-h4 mb-8 font-mont">About</h3>
           <CustomMapLink title={"珈琲作りのこだわり"} href={"/quality"} />
           <CustomMapLink title={"自社焙煎工場について"} href={"/factory"} />
         </div>
-        <div className=" col-span-2 flex flex-col items-start">
+        <div className=" col-span-2 flex flex-col items-start max-md:hidden">
           <h3 className="text-h4 mb-8 font-mont">Customer</h3>
           <span className="mt-4">法人のお客様</span>
           <CustomMapLink title={"飲食店のお客様へ"} href={"/for-restaurant"} />
@@ -31,11 +31,11 @@ const SiteMap = ({ className = "" }) => {
             href={"/for-retail"}
           />
         </div>
-        <div className=" col-span-2 flex flex-col items-start">
+        <div className=" col-span-2 flex flex-col items-start max-md:hidden">
           <h3 className="text-h4 mb-8 font-mont">Products</h3>
           <CustomMapLink title={"商品一覧"} href={"/products"} />
         </div>
-        <div className=" col-span-2 flex flex-col items-start">
+        <div className=" col-span-2 flex flex-col items-start max-md:hidden">
           <h3 className="text-h4 mb-8 font-mont">Company</h3>
           <CustomMapLink title={"会社概要"} href={"/corporate"} />
           <CustomMapLink title={"直営店舗"} href={"/shop"} />
@@ -47,7 +47,7 @@ const SiteMap = ({ className = "" }) => {
           </Link>
           <span>&copy;2023 HOJO Coffee Co.Ltd</span>
         </div>
-        <div className="col-span-8 flex justify-end items-end">
+        <div className="col-span-8 flex justify-end items-end max-md:hidden">
           <CustomMapLink
             title={"新着情報"}
             href={"/news"}

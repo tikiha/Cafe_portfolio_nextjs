@@ -11,7 +11,10 @@ const StickyContainer = ({ className = "" }) => {
   return (
     <Layout className={`relative pr-0 lg:mr-0 ${className}`}>
       {isInView ? (
-        <div className="col-start-2 col-span-5 sticky h-fit top-1/4 flex flex-col mt-32">
+        <div
+          className="md:col-span-5 md:col-start-2 md:sticky h-fit top-1/4 flex flex-col md:mt-32
+        max-md:col-span-10 max-md:col-start-2"
+        >
           <div className="flex items-center">
             <span className="text-red-500 font-bold text-xl focus-in-size">
               ・
@@ -20,20 +23,20 @@ const StickyContainer = ({ className = "" }) => {
               私たちの想い
             </span>
           </div>
-          <h1 className="text-h3 my-10 opacity-0 animate-[focus-in-expand_1.5s_0.6s_ease_forwards]">
+          <h1 className="text-h3 mt-[1em] opacity-0 animate-[focus-in-expand_1.5s_0.6s_ease_forwards]">
             すべては美味しい
             <br />
             珈琲のために。
           </h1>
-          <div className="opacity-0 animate-[fade-in-up_1.5s_0.9s_ease_forwards]">
-            <p className="text-body/loose mt-4">
+          <div className="opacity-0 animate-[fade-in-up_1.5s_0.9s_ease_forwards] md:text-body/loose ">
+            <p className="mt-[1em]">
               昭和25年創業、西日本屈指の焙煎工場を有し、
               <br />
               培ってきた焙煎とブレンドの技術を駆使し、
               <br />
               珈琲事業に関するあらゆる可能性を広げます。
             </p>
-            <p className="text-body/loose mt-4">
+            <p className="mt-[1em]">
               私たちは人のつながりと、コーヒーの持つ無限の可能性を信じ、
               <br />
               皆様の豊かな生活のために挑戦し続けます。
@@ -43,7 +46,7 @@ const StickyContainer = ({ className = "" }) => {
       ) : (
         <div ref={ref} className="col-span-6" />
       )}
-      <div className="col-span-6 aspect-[5/9] relative flex flex-col">
+      <div className="col-span-6 max-md:col-span-11 max-md:col-start-2 max-md:mt-10 aspect-[5/9] relative flex flex-col">
         <Link
           className="relative w-full aspect-square rounded-tl-[20%] overflow-hidden"
           href={"/"}

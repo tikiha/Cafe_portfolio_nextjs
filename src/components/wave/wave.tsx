@@ -25,10 +25,12 @@ const Wave2 = ({ className, ...rest }) => (
 
 const WaveAnimation = ({ className = "" }) => {
   return (
-    <div className={`w-full h-[7vw] -z-10 absolute ${className}`}>
-      <div className="w-full h-[7vw] relative flex items-center overflow-x-hidden">
-        <Wave1 className="wave fill-none stroke-dark stroke-[0.5px] absolute w-[300vw]" />
-        <Wave2 className="wave fill-none stroke-dark stroke-[0.5px] absolute w-[300vw]" />
+    <div
+      className={`w-full h-[7vw] max-md:h-[11vw] -z-10 absolute ${className}`}
+    >
+      <div className="w-full h-[7vw] max-md:h-[11vw] relative flex items-center overflow-x-hidden">
+        <Wave1 className="wave fill-none stroke-dark md:stroke-[0.5px] absolute w-[300vw] max-md:w-[500vw]" />
+        <Wave2 className="wave fill-none stroke-dark md:stroke-[0.5px] absolute w-[300vw] max-md:w-[500vw]" />
       </div>
     </div>
   );

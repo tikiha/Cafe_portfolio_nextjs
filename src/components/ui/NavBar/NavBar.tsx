@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import LogoPic from "@/Pics/next.svg";
+import LogoPic from "../../../../public/logo.png";
 import HamburgerButton from "./HamburgerButton";
 import StableMenu from "./StableMenu";
 import HamburgerMenu from "./HamburgerMenu";
@@ -61,7 +61,7 @@ const NavBar = () => {
     } `}
     >
       <Link href={"/"} className="h-full flex items-center ">
-        <Image src={LogoPic} alt={"next image"} className="h-1/2 w-auto" />
+        <Image src={LogoPic} alt={"next image"} className="h-[90%] w-auto" />
       </Link>
       <StableMenu />
       <HamburgerButton

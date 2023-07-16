@@ -65,7 +65,7 @@ const MainSwiper = ({ className = "" }) => {
     <Layout className={`relative ${className}`}>
       <Carousel isSelected={isSelected} className="col-span-10" />
       <WaveAnimation className="top-1/2" />
-      <div className="col-span-2 h-full pt-[30%] px-10">
+      <div className="col-span-2 h-full pt-[30%] px-10 max-md:hidden">
         <ol className=" h-fit relative">
           <div className="h-[calc(100%-30px)] my-4 border border-dashed border-slate-300 absolute left-[9px] " />
 

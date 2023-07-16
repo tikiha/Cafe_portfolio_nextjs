@@ -1,5 +1,6 @@
 import NavBar from "@/components/ui/NavBar/NavBar";
 import "../styles/globals.css";
+import "../styles/variants.scss";
 import "../styles/ScrollBar.css";
 import "../styles/text-animation.css";
 import {
